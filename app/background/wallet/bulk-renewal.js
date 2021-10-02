@@ -67,7 +67,7 @@ export const createRenewMany = async (wallet, names) => {
     output.covenant.pushU32(ns.height);
     output.covenant.pushHash(await wallet.wdb.getRenewalBlock());
 
-    mtx.addOutpoint(ns.owner);
+    mtx.addCoin(coin);
     mtx.outputs.push(output);
   }
 

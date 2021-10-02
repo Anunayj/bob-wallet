@@ -53,7 +53,7 @@ export default async function createRegisterAll(wallet) {
       output.covenant.push(EMPTY);
       output.covenant.pushHash(await wallet.wdb.getRenewalBlock());
 
-      mtx.addOutpoint(ns.owner);
+      mtx.addCoin(coin);
       mtx.outputs.push(output);
     }
   }
